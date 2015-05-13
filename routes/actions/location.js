@@ -15,9 +15,9 @@ exports.findById = function (req, res, next) {
 }
 
 exports.add = function (req, res, next) {
-    //if (!req.body.location) {
-    //    res.send(400, { status: 400, message: 'No location data' });
-    //}
+    if (!req.body.location) {
+        return res.send(400, { status: 400, message: 'No location data' });
+    }
     var location = req.body.location;
     Location.create(location, function (error, locationResponse) {
         if (error) return next(error);

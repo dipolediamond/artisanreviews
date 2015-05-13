@@ -1,7 +1,7 @@
 ﻿var mongoose = require('mongoose');
 
 var occupationSchema = new mongoose.Schema({
-    label: String,
+    label: { type: String, required: true },
     description: String
 });
 
