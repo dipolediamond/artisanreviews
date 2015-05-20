@@ -1,3 +1,4 @@
+/// <reference path="../typings/node/node.d.ts"/>
 var express = require('express');
 var path = require('path');
 var favicon = require('static-favicon');
@@ -12,7 +13,7 @@ var apiRoutes = require('./routes/api');
 var app = express(); 
 
 // database connection
-dbURI = 'mongodb://localhost/ArtisanReviews';
+var dbURI = 'mongodb://localhost/ArtisanReviews';
 mongoose.connect(dbURI);
 
 // view engine setup
